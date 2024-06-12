@@ -16,7 +16,11 @@ Branch ini digunakan untuk modul Studi Kasus: Membangun Aplikasi Machine Learnin
 - nvm use --lts
 - sudo apt-get update
 - sudo apt-get install apt-transport-https ca-certificates gnupg curl
+==================
 - curl https://packages.cloud.google.com/apt/doc/apt-key/gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google/gpg
+atau
+- sudo curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/cloud.google.gpg
+==================
 - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 - sudo apt-get update && sudo apt-get install google-cloud-cli
 - gcloud --version
